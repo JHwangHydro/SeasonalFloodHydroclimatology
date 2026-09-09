@@ -1,7 +1,7 @@
 [README.md](https://github.com/user-attachments/files/32029220/README.md)
 # Seasonal Flood Hydroclimatology Models
 
-This repository contains the R code and sample data used to fit the hierarchical mixed-effects models and conduct the dominance analysis for Hwang et al. (2026), *Seasonal Flood Hydroclimatology*.
+This repository contains the R code and sample data used to fit the hierarchical mixed-effects models and conduct the dominance analysis for Hwang et al. (2026), *Seasonal Flood Hydroclimatology of the Conterminous United States.*.
 
 The analysis examines how antecedent streamflow and large-scale climate variability are associated with monthly high flows across the conterminous United States. The models account for the hierarchical organization of stations within four-digit hydrologic regions (HUC4), which are nested within two-digit hydrologic regions (HUC2).
 
