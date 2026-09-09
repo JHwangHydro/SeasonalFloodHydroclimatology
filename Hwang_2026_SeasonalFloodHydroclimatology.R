@@ -1,5 +1,9 @@
-setwd()
+library(lme4)
+library(tidyverse)
+
+setwd() # Set directory
 df_winter <- read.csv("df_winter.csv", header = T)
+
 # qmax: monthly 3-day maxima
 # qpre: monthly mean flow from precedent month
 # ENSO: Nino 3.4 (3-month rolling average)
@@ -9,7 +13,7 @@ df_winter <- read.csv("df_winter.csv", header = T)
 # PNA: PNA (3-month rolling average)
 # MJO1: First principal component of rMII (3-month rolling average)
 # MJO2: Second principal component of rMII 3.4 (3-month rolling average)
-# df is nested for HUC2 (group_huc2), HUC4 (group_huc4), and station (group_station)
+# df_winter is nested for HUC2 (group_huc2), HUC4 (group_huc4), and station (group_station)
 
 # Base model ----
 mod0 <- lmer(
@@ -17,7 +21,7 @@ mod0 <- lmer(
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_huc2) +
     (1 | group_huc4) +
     (1 | group_station),
-  data = df,
+  data = df_winter,
   REML = FALSE,
   control = lmerControl(
     optimizer = "bobyqa",
@@ -31,7 +35,7 @@ mod_station <- lmer(
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_huc2) +
     (1 | group_huc4) +
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_station),
-  data = df,
+  data = df_winter,
   REML = FALSE,
   control = lmerControl(
     optimizer = "bobyqa",
@@ -45,7 +49,7 @@ mod_huc4 <- lmer(
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_huc2) +
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_huc4) +
     (1 | group_station),
-  data = df,
+  data = df_winter,
   REML = FALSE,
   control = lmerControl(
     optimizer = "bobyqa",
@@ -59,7 +63,7 @@ mod_full <- lmer(
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_huc2) +
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_huc4) +
     (qpre + ENSO + AMO + NAO + PDO + PNA + pc1 + pc2 || group_station),
-  data = df,
+  data = df_winter,
   REML = FALSE,
   control = lmerControl(
     optimizer = "bobyqa",
