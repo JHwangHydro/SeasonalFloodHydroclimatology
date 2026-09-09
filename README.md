@@ -57,7 +57,6 @@ The dominance analysis evaluates the relative contribution of four physically de
 
 Each subset model is fitted to the complete analysis dataset using the hierarchical mixed-effects structure. Station-specific R² values are then calculated from the fitted values. For each predictor group, incremental R² is averaged across all predictor-group combinations of the same subset size and then equally across subset sizes to obtain the general dominance statistic.
 
-Negative incremental R² values are retained in the diagnostic output but set to zero when the dominance statistics are aggregated. The function also returns convergence and singular-fit diagnostics for all fitted subset models.
 
 ## Requirements
 
