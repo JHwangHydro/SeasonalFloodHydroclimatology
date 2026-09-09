@@ -110,8 +110,4 @@ Fitting the dominance-analysis subset models can be computationally intensive. T
 
 If you use this code, please cite the associated paper. Complete the citation below when the article information is finalized:
 
-> Hwang, J., et al. (2026). *Seasonal Flood Hydroclimatology*. [Journal and DOI to be added].
-
-## License
-
-No license has yet been specified. Add a `LICENSE` file before public release to define how others may use, modify, and distribute the code and sample data.
+> Hwang, J., et al. (2026). *Seasonal Flood Hydroclimatology of the Conterminous United States*. [Journal and DOI to be added].
