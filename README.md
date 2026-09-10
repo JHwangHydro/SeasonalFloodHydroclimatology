@@ -1,6 +1,6 @@
 [README.md](https://github.com/user-attachments/files/32029220/README.md)
 
-DOI: 10.5281/zenodo.22698218
+[![DOI](https://zenodo.org/badge/1363258671.svg)](https://doi.org/10.5281/zenodo.22698217)
 
 # Seasonal Flood Hydroclimatology Models
 
