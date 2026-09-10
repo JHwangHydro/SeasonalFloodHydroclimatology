@@ -90,7 +90,7 @@ source("DA_function.R")
 source("Hwang_2026_SeasonalFloodHydroclimatology.R")
 ```
 
-Before sourcing the main script, replace its placeholder `setwd()` call with the path to the repository or remove that line when R is already running from the repository root. In the candidate-model section, use `data = df_winter` or define `df <- df_winter`; the final model and dominance analysis already use `df_winter`.
+Before sourcing the main script, replace its placeholder `setwd()` call with the path to the repository or remove that line when R is already running from the repository root.
 
 Fitting the dominance-analysis subset models can be computationally intensive. The function caches identical predictor subsets during a run to avoid fitting the same model more than once.
 
