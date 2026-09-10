@@ -1,8 +1,7 @@
 [README.md](https://github.com/user-attachments/files/32029220/README.md)
 
+# Hierarchical Mixed-Effects Modeling and Dominance Analysis for Seasonal Flood Hydroclimatology
 [![DOI](https://zenodo.org/badge/1363258671.svg)](https://doi.org/10.5281/zenodo.22698217)
-
-# Seasonal Flood Hydroclimatology Models
 
 This repository contains the R code and sample data used to fit the hierarchical mixed-effects models and conduct the dominance analysis for Hwang et al. (2026), *Seasonal Flood Hydroclimatology of the Conterminous United States.*.
 
